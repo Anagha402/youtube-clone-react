@@ -29,7 +29,7 @@ function Feed({category}) {
             
 <Link to={`video/${item.snippet.categoryId}/${item.id}`} className="card" style={{textDecoration:"none"}}>
         <img src={item.snippet.thumbnails.medium.url}  alt="" />
-        <h4>{item.snippet.title}</h4>
+        <h4>{item.snippet.title.slice(0,25)}</h4>
         <h5>{item.snippet.channelTitle}</h5>
         <p>{value_converter(item.statistics.viewCount)} &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
     </Link>
